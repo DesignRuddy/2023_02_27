@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style> *{font-size: 16pt;} </style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+function myAAA(){    
+  
+     var a = $('#numa').val();  //jQuery를 사용한 문장
+
+     alert('myAAA함수 '+ a);
+};//end 
+
+
+$(document).ready(function(){
+    $('#btn2').click(function(){
+        var b = $('#numb').val();
+        alert('myBBB함수 '+ b);
+
+    });
+
+        jQuery('#btn3').on('click',function(){
+        var c = $('#numc').val(); 
+        alert('myCCC함수 '+ c);
+    });
+});//시작의 end
+
+</script>
+
+</head>
+<body>
+    <h2>01 Testfomr.html - 본인이름</h2>
+ <form name="myform" action="">
+    코드a: <input type="text" name="numa" id="numa" value="호영_이"> <br>
+    코드b: <input type="text" name="numb" id="numb" value="먼데이먼데이"> <br>
+    코드c: <input type="text" name="numc" id="numc" value="수요일은 휴무"  > <br>
+    <input type="button" onclick="myAAA()" id="btn1" value="myAAA함수">
+    <input type="button" onclick="myBBB()" id="btn2" value="myBBB함수">
+    <input type="button" onclick="myCCC()" id="btn3" value="myCCC함수">
+    <input type="button" onclick="location.reload();" value="재실행">
+ </form>
+</body>
+</html>

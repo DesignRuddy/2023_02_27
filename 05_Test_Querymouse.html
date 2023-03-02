@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQuery_mouse.html  </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    
+<script>
+$(document). ready(function() {
+    $( "#btn1" ).click(function(){
+        // // $('##btn3').css({background:'pink'})
+        // $('#btn1').css('background','yellow')
+        // $('#btn1').css('border','2px solid green')
+        // $('#btn1').css('height','70px')
+        // $('#btn1').css('width','100px')
+        // $('#btn1').css('color','red')
+        // $('#display').text('A+ Male.')
+    });//click end
+    
+    $('button').mouseover(function(){//over = enter
+        $(this).addClass('btncolor');
+    });
+    $('button').mouseleave(function(){ //out = leave
+        $(this).removeClass('btncolor');
+    });
+    $('btn1').mouseleave(function(){ 
+        $('display').text('음악감상하기');
+    });
+    $('btn2').mouseleave(function(){
+        $('display').text('야구장가기');
+    });
+    $('btn3').click(function(){
+        $('display').text('공부하기');
+    });
+});//ready end
+</script>
+  
+</head>
+<!-- 주석 '시작' 입니다.    ------  -->
+<body>
+    <h2> jQuery_mouse.html  </h2>
+    
+    <button id="btn1"> 음악감상   </button>
+    <button id="btn2"> 야구장 가기    </button>
+    <button id="btn3"> 배구응원   </button>
+    <button> 등산하기   </button>
+    <button> 공부하기   </button>
+    <button onclick="location">현재문서 Load</button>
+    <div id="display"></div>
+
+</body>
+<!-- 주석 '끝' 입니다.    ------  -->
+<style>
+    /*css주석 기입  */
+    *{
+        font-size: 14pt;
+        text-decoration: none;
+    }
+    .btncolor { background-color: hotpink;}
+    /* .btncolorover { background-color: orange;}
+    .btncolorout {background-color: lightsea;} */
+</style>
+</html>

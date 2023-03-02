@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>77testfat.html</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+<style>
+      #display {
+        border: 1px solid gray;
+        height: 150px;
+        width: 320px;
+        margin: 30px 50px;
+      }
+</style>
+
+<script>
+$(document).ready(function(){
+  $('input[name=typ]').css({'margin-right':'20pt'})
+  
+  $('#result').on('click',function(){
+
+    let height = (document.getElementById('height').value)*0.01;
+    let weight = (document.getElementById('weight').value);
+    let result = Math.floor(weight/(height*height));  
+
+  if(height == ' ' || weight==' '){
+      alert('값을 입력하세요');
+    }
+
+    if(result>=30){
+      $('#display').html('당신의 체지방률은 '+result+'이며 비만입니다.');
+    }
+    else if(30>result>24){
+      $('#display').html('당신의 체지방률은 '+result+'이며 과체중입니다.');
+    }
+    else if(25>result>19){
+      $('#display').html('당신의 체지방률은 '+result+'이며 정상입니다.');
+    }
+    else if(20>result){
+      $('#display').html('당신의 체지방률은 '+result+'이며 저체중입니다.');
+    }
+  });
+});
+
+  
+    </script>
+  </head>
+
+  <body>
+  <h2> addEventListener test</h2>
+  본인키입력 <input type="number" name="typ" id="height" value="" placeholder="cm" />
+    <br />
+  몸무게입력 <input type="number" name="typ" id="weight" value="" placeholder="kg" />
+    <button id="result" >result</button>
+    <div id="display"></div>
+  </body>
+</html>

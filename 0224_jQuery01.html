@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 03_Test_jQuery.html  </title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    
+<script>
+$(document). ready(function() {
+    $( "#btn1" ).click(function(){
+        // $('##btn3').css({background:'pink'})
+        $('#btn1').css('background','yellow')
+        $('#btn1').css('border','2px solid green')
+        $('#btn1').css('height','70px')
+        $('#btn1').css('width','100px')
+        $('#btn1').css('color','red')
+        $('#display').text('A+ Male.')
+    });//end
+
+    $( '#btn2_myspring' ).on('click',function(){
+        $(this).css('background','purple')
+        $(this).css('border','2px solid yellow')
+        $(this).css('height','70px')
+        $(this).css('width','100px')
+        $(this).css('color','white')
+        $('#display').html('A+ Male 알파남.')
+        // document.getElementById('display2').innerHTML='A+ Male'
+      });
+    $( '#btn3' ).click(function(event){
+        $('#btn3').css({
+            'background': '#abcdef',
+            'border': '1px solid red',
+            'height': '70px',
+            'width': '100px',
+            'color': '#ff00ff'
+        });
+        $('#display').html('<h2>button3 눌렀습니다 -문자열 호영</h2>');
+    });
+    $('#btn4').click(function(){
+        $(this).css({'background':'pink','height':'30px','font-size':'20px','color':'red'})
+        $(this).css('border','2px solid yellow')
+        $('#display').html('display영역입니다. 내일모레가 3월 시작입니다.')
+    });
+});
+</script>
+  
+</head>
+<!-- 주석 '시작' 입니다.    ------  -->
+<body>
+    <h2> jQuery.html  </h2>
+
+    <input type="button" id="btn1" value="Who?">
+    <input type="button" id="btn2_myspring" value="버튼2">
+    <input type="button" id="btn3" value="버튼3">
+    <hr>
+    <input type="button" id="btn4" value="버튼4">
+    <input type="button" id="btn5" onclick="location.reload()" value="버튼5-로드">
+
+
+    <div id="display">
+    </div>
+
+</body>
+<!-- 주석 '끝' 입니다.    ------  -->
+<style>
+    /*css주석 기입  */
+    *{
+        font-size: 14pt;
+        text-decoration: none;
+    }
+</style>
+</html>
